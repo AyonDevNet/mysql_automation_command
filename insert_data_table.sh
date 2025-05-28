@@ -68,7 +68,7 @@ EOM
 
 echo "🚀 Running SQL commands to configure database..."
 # Pipe SQL to MySQL (as root or via sudo)
-echo "$SQL_COMMANDS" | sudo mysql > 2 /dev/null
+echo "$SQL_COMMANDS" | sudo mysql > 2 >/dev/null
 
 echo " All tasks complete: MySQL installed, database and table created, and data inserted!"
 
