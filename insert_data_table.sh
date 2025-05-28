@@ -72,8 +72,5 @@ echo "$SQL_COMMANDS" | sudo mysql > 2 /dev/null
 
 echo " All tasks complete: MySQL installed, database and table created, and data inserted!"
 
-
-
-
 #this script helps to you install mysql-server
 #it wil create 
