@@ -2,15 +2,15 @@
 
 # Check if MySQL is already installed
 if mysql --version >/dev/null 2>&1; then
-    echo "✅ MySQL is already installed."
+    echo " MySQL is already installed."
 else
-    echo "⏳ MySQL is not installed. Installing now..."
+    echo " MySQL is not installed. Installing now..."
     sleep 2s
     sudo apt-get update
     sudo apt-get install mysql-server -y
-    echo "✅ MySQL installation complete."
+    echo "MySQL installation complete."
 
-    echo "🔒 Securing MySQL..."
+    echo " Securing MySQL..."
     sudo mysql_secure_installation
 fi
 
@@ -66,7 +66,7 @@ INSERT INTO employees (name, designation, department, address) VALUES
 ('Farzana Khan', 'Digital Marketing Officer', 'Marketing', 'Mirpur-12, Dhaka'),
 EOM
 
-echo "🚀 Running SQL commands to configure database..."
+echo " Running SQL commands to configure database..."
 # Pipe SQL to MySQL (as root or via sudo)
 echo "$SQL_COMMANDS" | sudo mysql > 2 >/dev/null
 
